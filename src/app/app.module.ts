@@ -11,9 +11,10 @@ import { getUsersEffect } from "./user-state/effects/user.effects";
 import { userReducer } from "./user-state/reducers/user.reducer";
 import { LoginComponent } from "./components/login/login.component";
 import { FormsModule } from "@angular/forms";
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent],
+  declarations: [AppComponent, LoginComponent, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

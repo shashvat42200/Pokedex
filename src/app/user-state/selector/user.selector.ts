@@ -1,7 +1,7 @@
 import { User } from "src/app/classes/user";
 import { createFeatureSelector, createSelector } from "@ngrx/store";
 
-export const allUserLogin = createSelector(
+export const currentUserLogin = createSelector(
   createFeatureSelector("users"),
   (state: User[]) => {
     const shirtOption = { ...state };
@@ -11,4 +11,9 @@ export const allUserLogin = createSelector(
     });
     return shirtsArray;
   }
+);
+export const selectAuthState = createFeatureSelector<Object>("users");
+export const isLoggedIn = createSelector(
+  selectAuthState,
+  (auth) => !!auth["user"].error
 );
