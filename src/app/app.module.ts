@@ -13,10 +13,15 @@ import { LoginComponent } from "./components/login/login.component";
 import { FormsModule } from "@angular/forms";
 import { HomeComponent } from "./components/home/home.component";
 import { ReactiveFormsModule } from "@angular/forms";
-import { UpperBarComponent } from './components/upper-bar/upper-bar.component';
+import { UpperBarComponent } from "./components/upper-bar/upper-bar.component";
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, HomeComponent, UpperBarComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    HomeComponent,
+    UpperBarComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

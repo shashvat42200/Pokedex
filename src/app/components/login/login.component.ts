@@ -1,10 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { getUsers } from "src/app/user-state/actions/user.action";
-import {
-  currentUserLogin,
-  isLoggedIn,
-} from "src/app/user-state/selector/user.selector";
 import { Router } from "@angular/router";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 
@@ -17,7 +13,7 @@ export class LoginComponent implements OnInit {
   submitted: boolean = false;
   formGroup = new FormGroup({
     email: new FormControl("asdf@gmail.com", Validators.required),
-    password: new FormControl("", Validators.required),
+    password: new FormControl("12345", Validators.required),
   });
   constructor(private store: Store, private router: Router) {}
   ngOnInit() {}
