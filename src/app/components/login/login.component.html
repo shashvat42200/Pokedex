@@ -1,5 +1,28 @@
 <div id="login-container">
-  <input type="textbox" id="email" [(ngModel)]="email" />
-  <input type="textbox" id="password" [(ngModel)]="password" />
-  <button value="Log In" (click)="login()">Log In</button>
+  <app-upper-bar></app-upper-bar>
+  <img src="./assets/Group 28.png" class="side-img" />
+  <div id="loginForm-container">
+    <form [formGroup]="formGroup">
+      <p class="field">Email</p>
+      <input
+        type="textbox"
+        id="email"
+        formControlName="email"
+        [ngClass]="{
+          'has-error': formGroup.controls['email'].invalid && submitted
+        }"
+      />
+      <p class="field">Password</p>
+      <input
+        type="textbox"
+        id="password"
+        formControlName="password"
+        [ngClass]="{
+          'has-error': formGroup.controls['password'].invalid && submitted
+        }"
+      />
+      <button value="Log In" (click)="login()" id="login-btn">Log In</button>
+    </form>
+  </div>
+  <img src="./assets/Group 41.png" class="side-img" />
 </div>

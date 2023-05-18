@@ -7,5 +7,5 @@ export const initialState: object = {};
 export const userReducer = createReducer(
   initialState,
   on(getUsersSuccess, (state, user) => user),
-  on(getUsersFailure, (state, user) => user)
+  on(getUsersFailure, (state, user) => (user = undefined))
 );

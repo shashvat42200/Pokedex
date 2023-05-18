@@ -12,6 +12,7 @@ export class AppService {
   userUrl = "https://pokedex-app-c8934-default-rtdb.firebaseio.com/users.json";
   teamsUrl = "https://pokedex-app-c8934-default-rtdb.firebaseio.com/teams.json";
   allUserData = [];
+  isLoggedin = false;
   constructor(private http: HttpClient) {}
 
   getUserInfo(email: string, password: string): Observable<any> {
@@ -21,7 +22,7 @@ export class AppService {
         res = Object.values(res);
         res.forEach((element) => {
           if (element.email === email && element.password === password) {
-            console.log(element);
+            this.isLoggedin = true;
             found = element;
           }
         });

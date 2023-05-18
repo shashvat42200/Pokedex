@@ -12,8 +12,8 @@ export const currentUserLogin = createSelector(
     return shirtsArray;
   }
 );
-export const selectAuthState = createFeatureSelector<Object>("users");
+
 export const isLoggedIn = createSelector(
-  selectAuthState,
-  (auth) => !!auth["user"].error
+  createFeatureSelector("users"),
+  (state: User) => !!state
 );

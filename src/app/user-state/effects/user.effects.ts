@@ -8,6 +8,7 @@ import {
 } from "../actions/user.action";
 import { catchError, exhaustMap, map, mergeMap, switchMap } from "rxjs";
 import { of } from "rxjs";
+import { Router } from "@angular/router";
 
 @Injectable()
 export class getUsersEffect {
@@ -19,11 +20,17 @@ export class getUsersEffect {
           map((userData) => {
             if (Object.keys(userData).length == 0)
               return getUsersFailure({ error: "Authentication Failed" });
-            else return getUsersSuccess(userData);
+            else {
+              return getUsersSuccess(userData);
+            }
           })
         )
       )
     )
   );
-  constructor(private actions$: Actions, private appService: AppService) {}
+  constructor(
+    private actions$: Actions,
+    private appService: AppService,
+    private router: Router
+  ) {}
 }

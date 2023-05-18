@@ -1,8 +1,12 @@
 import { Component, OnInit } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { getUsers } from "src/app/user-state/actions/user.action";
-import { currentUserLogin } from "src/app/user-state/selector/user.selector";
+import {
+  currentUserLogin,
+  isLoggedIn,
+} from "src/app/user-state/selector/user.selector";
 import { Router } from "@angular/router";
+import { FormControl, FormGroup, Validators } from "@angular/forms";
 
 @Component({
   selector: "app-login",
@@ -10,14 +14,22 @@ import { Router } from "@angular/router";
   styleUrls: ["./login.component.css"],
 })
 export class LoginComponent implements OnInit {
-  email: string = "";
-  password: string = "";
+  submitted: boolean = false;
+  formGroup = new FormGroup({
+    email: new FormControl("asdf@gmail.com", Validators.required),
+    password: new FormControl("", Validators.required),
+  });
   constructor(private store: Store, private router: Router) {}
   ngOnInit() {}
   login() {
-    this.store.dispatch(
-      getUsers({ email: this.email, password: this.password })
-    );
-    if (this.store.select(currentUserLogin)) this.router.navigateByUrl("/home");
+    this.submitted = true;
+    if (this.formGroup.valid) {
+      this.store.dispatch(
+        getUsers({
+          email: this.formGroup.value.email,
+          password: this.formGroup.value.password,
+        })
+      );
+    }
   }
 }
