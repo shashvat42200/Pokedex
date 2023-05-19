@@ -14,6 +14,7 @@ import { FormsModule } from "@angular/forms";
 import { HomeComponent } from "./components/home/home.component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { UpperBarComponent } from "./components/upper-bar/upper-bar.component";
+import { GeneralCardDisplayComponent } from './components/general-card-display/general-card-display.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { UpperBarComponent } from "./components/upper-bar/upper-bar.component";
     LoginComponent,
     HomeComponent,
     UpperBarComponent,
+    GeneralCardDisplayComponent,
   ],
   imports: [
     BrowserModule,

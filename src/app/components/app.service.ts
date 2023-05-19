@@ -31,4 +31,8 @@ export class AppService {
       })
     );
   }
+
+  getPokemon(url: string): Observable<any> {
+    return this.http.get<any>(url);
+  }
 }
