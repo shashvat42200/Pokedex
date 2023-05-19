@@ -2,16 +2,13 @@
   position: absolute;
   background-color: #000029;
   height: 88px;
-  width: 102.5%;
+  width: 102%;
   display: flex;
   justify-content: center;
-  margin-left: -10%;
-  margin-top: -28%;
-  overflow: hidden;
-  padding-right: 1.25%;
+  justify-self: center;
+  margin-top: -10px;
 }
 #logo-img {
   height: 58px;
   margin-top: 15px;
-  margin-left: 100px;
 }

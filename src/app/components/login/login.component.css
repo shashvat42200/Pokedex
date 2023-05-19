@@ -12,7 +12,7 @@
 #loginForm-container {
   display: flex;
   background-color: white;
-  height: 325px;
+  height: 350px;
   width: 500px;
   border-radius: 10px;
   justify-content: center;
@@ -21,6 +21,7 @@
 .field {
   text-align: center;
   font-weight: bold;
+  font-size: 20px;
 }
 .side-img {
   height: 270px;
@@ -33,7 +34,7 @@
   border-radius: 50px;
   color: white;
   font-weight: bold;
-  margin-left: 25%;
+  margin-left: 23%;
   margin-top: 10%;
 }
 input[type="textbox"] {
