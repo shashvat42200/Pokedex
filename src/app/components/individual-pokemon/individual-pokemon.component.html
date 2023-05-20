@@ -1,0 +1,43 @@
+<div id="pokemon-container">
+  <div
+    id="top-photo-container"
+    [class]="pokemonData.extra.__zone_symbol__value.types[0].type.name"
+  >
+    <img
+      [src]="
+        './assets/' +
+        pokemonData.extra.__zone_symbol__value.types[0].type.name +
+        '.svg'
+      "
+      alt=""
+      id="top-bg-img"
+    />
+    <img
+      [src]="
+        pokemonData.extra.__zone_symbol__value.sprites.other.dream_world
+          .front_default
+      "
+      alt=""
+      id="pokemon-profile"
+    />
+  </div>
+  <p id="name">{{ pokemonData.name }}</p>
+  <div id="type-wrapper">
+    <div
+      *ngFor="let Ptype of pokemonData.extra.__zone_symbol__value.types"
+      id="typeSmall-container"
+      [class]="Ptype.type.name"
+    >
+      <div id="image-wrapper">
+        <img
+          id="typeSmall-img"
+          [src]="'./assets/small-type/' + Ptype.type.name + '.svg'"
+          alt=""
+        />
+      </div>
+      <p id="type-text">
+        {{ Ptype.type.name }}
+      </p>
+    </div>
+  </div>
+</div>

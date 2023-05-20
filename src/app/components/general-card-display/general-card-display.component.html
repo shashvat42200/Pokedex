@@ -1,5 +1,19 @@
+<div id="individual-container" *ngIf="dispPokemon">
+  <img
+    src="./assets/back-arrow.svg"
+    id="back-arrow"
+    (click)="closeIndPokemon()"
+  />
+  <app-individual-pokemon
+    [pokemonData]="dispPokemonData"
+  ></app-individual-pokemon>
+</div>
 <div id="general-card-container">
-  <div id="individual-card-container" *ngFor="let pokemon of pokemonData">
+  <div
+    id="individual-card-container"
+    *ngFor="let pokemon of pokemonData"
+    (click)="dispPokemonCard(pokemon)"
+  >
     <div
       id="info-container"
       [class]="pokemon.extra.__zone_symbol__value.types[0].type.name"
@@ -27,7 +41,15 @@
       id="photo-container"
       [class]="pokemon.extra.__zone_symbol__value.types[0].type.name"
     >
-      <img src="./assets/water.svg" alt="" id="bg-type-img" />
+      <img
+        [src]="
+          './assets/' +
+          pokemon.extra.__zone_symbol__value.types[0].type.name +
+          '.svg'
+        "
+        alt=""
+        id="bg-type-img"
+      />
       <img
         [src]="pokemon.extra.__zone_symbol__value.sprites.front_default"
         alt=""
@@ -36,4 +58,3 @@
     </div>
   </div>
 </div>
-<button (click)="load()"></button>

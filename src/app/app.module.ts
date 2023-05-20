@@ -15,6 +15,7 @@ import { HomeComponent } from "./components/home/home.component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { UpperBarComponent } from "./components/upper-bar/upper-bar.component";
 import { GeneralCardDisplayComponent } from './components/general-card-display/general-card-display.component';
+import { IndividualPokemonComponent } from './components/individual-pokemon/individual-pokemon.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { GeneralCardDisplayComponent } from './components/general-card-display/g
     HomeComponent,
     UpperBarComponent,
     GeneralCardDisplayComponent,
+    IndividualPokemonComponent,
   ],
   imports: [
     BrowserModule,
