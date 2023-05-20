@@ -1,1 +1,39 @@
+<div id="general-card-container">
+  <div id="individual-card-container" *ngFor="let pokemon of pokemonData">
+    <div
+      id="info-container"
+      [class]="pokemon.extra.__zone_symbol__value.types[0].type.name"
+    ></div>
+    <p id="name">{{ pokemon.name }}</p>
+    <div id="type-wrapper">
+      <div
+        *ngFor="let Ptype of pokemon.extra.__zone_symbol__value.types"
+        id="typeSmall-container"
+        [class]="Ptype.type.name"
+      >
+        <div id="image-wrapper">
+          <img
+            id="typeSmall-img"
+            [src]="'./assets/small-type/' + Ptype.type.name + '.svg'"
+            alt=""
+          />
+        </div>
+        <p id="type-text">
+          {{ Ptype.type.name }}
+        </p>
+      </div>
+    </div>
+    <div
+      id="photo-container"
+      [class]="pokemon.extra.__zone_symbol__value.types[0].type.name"
+    >
+      <img src="./assets/water.svg" alt="" id="bg-type-img" />
+      <img
+        [src]="pokemon.extra.__zone_symbol__value.sprites.front_default"
+        alt=""
+        id="pokemon-img"
+      />
+    </div>
+  </div>
+</div>
 <button (click)="load()"></button>

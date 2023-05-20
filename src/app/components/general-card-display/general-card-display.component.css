@@ -1,0 +1,132 @@
+#general-card-container {
+  display: grid;
+  margin-top: 100px;
+  grid-template-columns: 33% 33% 33%;
+  place-items: center;
+  row-gap: 20px;
+}
+#individual-card-container {
+  height: 102px;
+  width: 326px;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  border-radius: 10px;
+}
+#image-wrapper {
+  background-color: white;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  margin-left: 3px;
+  margin-top: 2px;
+  margin-right: 5px;
+}
+#name {
+  color: black;
+  font-size: 21px;
+  font-weight: bolder;
+  position: absolute;
+  margin-left: 20px;
+  text-transform: capitalize;
+}
+#type-wrapper {
+  display: flex;
+  margin-left: 10px;
+  margin-top: 65px;
+  position: absolute;
+  height: 25px;
+  column-gap: 10px;
+}
+
+#typeSmall-container {
+  display: flex;
+  padding-right: 10px;
+  border-radius: 50px;
+}
+#type-text {
+  text-transform: capitalize;
+  font-size: 12px;
+  margin-top: 3px;
+}
+#typeSmall-img {
+  margin-top: 2px;
+  margin-left: 2px;
+  height: 15px;
+  width: 15px;
+}
+#info-container {
+  opacity: 0.2;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+#photo-container {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.water {
+  background-color: #5090d6;
+}
+.dragon {
+  background-color: #0b6dc3;
+}
+.electic {
+  background-color: #f4d23c;
+}
+.fairy {
+  background-color: #ec8fe6;
+}
+.ghost {
+  background-color: #5269ad;
+}
+.fire {
+  background-color: #ff9d55;
+}
+.ice {
+  background-color: #73cec0;
+}
+.grass {
+  background-color: #63bc5a;
+}
+.bug {
+  background-color: #91c12f;
+}
+.fighting {
+  background-color: #ce416b;
+}
+.normal {
+  background-color: #919aa2;
+}
+.dark {
+  background-color: #5a5465;
+}
+.steel {
+  background-color: #5a8ea2;
+}
+.rock {
+  background-color: #c5b78c;
+}
+.psychic {
+  background-color: #fa7179;
+}
+.ground {
+  background-color: #d97845;
+}
+.poison {
+  background-color: #b567ce;
+}
+.flying {
+  background-color: #89aae3;
+}
+
+#bg-type-img {
+  margin-top: 10px;
+  margin-left: 35px;
+  height: 80px;
+  fill: white;
+}
+#pokemon-img {
+  position: absolute;
+  height: 90px;
+  margin-left: -70px;
+  margin-top: 10px;
+}
