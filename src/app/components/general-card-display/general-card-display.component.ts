@@ -9,7 +9,9 @@ export class GeneralCardDisplayComponent implements OnInit {
   @Input() pokemonData;
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.load();
+  }
   load() {
     console.log(this.pokemonData);
   }

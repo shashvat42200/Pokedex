@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { AppService } from "../app.service";
+//import { setTimeout } from "timers";
 
 @Component({
   selector: "app-home",
@@ -8,13 +9,15 @@ import { AppService } from "../app.service";
 })
 export class HomeComponent implements OnInit {
   pokemonData: any = [];
-  pokedexDataUrl = "https://pokeapi.co/api/v2/pokemon";
+  dataReceived: boolean = false;
+  pokedexDataUrl = "https://pokeapi.co/api/v2/pokemon?limit=60";
   constructor(private appService: AppService) {}
 
   ngOnInit(): void {
     this.loadPokemonData();
   }
   loadPokemonData() {
+    this.dataReceived = false;
     this.appService.getPokemon(this.pokedexDataUrl).subscribe((data) => {
       this.pokemonData = Object.values(data);
       this.pokedexDataUrl = this.pokemonData[1];
@@ -24,6 +27,7 @@ export class HomeComponent implements OnInit {
           extra: this.loadType(f.url),
         };
       });
+      setTimeout(() => (this.dataReceived = true), 500);
     });
   }
   loadType(url: string): any {
