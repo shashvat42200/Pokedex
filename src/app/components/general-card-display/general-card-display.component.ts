@@ -11,13 +11,7 @@ export class GeneralCardDisplayComponent implements OnInit {
   dispPokemonData: Object = {};
   constructor() {}
 
-  ngOnInit(): void {
-    this.load();
-    //this.dispPokemonData = this.pokemonData[0];
-  }
-  load() {
-    console.log(this.pokemonData);
-  }
+  ngOnInit(): void {}
   dispPokemonCard(pokemon: Object) {
     this.dispPokemon = true;
     this.dispPokemonData = pokemon;

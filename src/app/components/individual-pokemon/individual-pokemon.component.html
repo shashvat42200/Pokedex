@@ -40,4 +40,67 @@
       </p>
     </div>
   </div>
+  <div id="info-container">
+    <div class="firstrow-info">
+      <div class="flex-div">
+        <img src="./assets/weight.svg" id="weight-svg" />
+        <p class="sm-text-field">Weight</p>
+      </div>
+      <p class="big-text-field">
+        {{ pokemonData.extra.__zone_symbol__value.weight }} Kg
+      </p>
+      <div class="flex-div">
+        <img src="./assets/height.svg" id="weight-svg" />
+        <p class="sm-text-field">Height</p>
+      </div>
+      <p class="big-text-field">
+        {{ pokemonData.extra.__zone_symbol__value.height }} m
+      </p>
+    </div>
+    <div class="firstrow-info" id="second-row">
+      <div class="flex-div">
+        <img src="./assets/5.svg" id="weight-svg" />
+        <p class="sm-text-field">Ability 1</p>
+      </div>
+      <p class="big-text-field">
+        {{ pokemonData.extra.__zone_symbol__value.abilities[0].ability.name }}
+      </p>
+      <div class="flex-div">
+        <img src="./assets/5.svg" id="weight-svg" />
+        <p class="sm-text-field">Ability 2</p>
+      </div>
+      <p class="big-text-field">
+        {{
+          pokemonData.extra.__zone_symbol__value?.abilities[1]?.ability?.name ||
+            "none"
+        }}
+      </p>
+    </div>
+  </div>
+  <p id="name">Evolution</p>
+  <div
+    *ngFor="let evolution of filteredEvolutionData"
+    id="evolution-container"
+    [class]="pokemonData.extra.__zone_symbol__value.types[0].type.name"
+  >
+    <img
+      [src]="
+        './assets/' +
+        pokemonData.extra.__zone_symbol__value.types[0].type.name +
+        '.svg'
+      "
+      alt=""
+      id="evolution-type-img"
+    />
+    <img
+      [src]="
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' +
+        evolution[1] +
+        '.png'
+      "
+      alt=""
+      id="evolution-pokemon-img"
+    />
+    <p id="evolution-name">{{ evolution[0] }}</p>
+  </div>
 </div>
