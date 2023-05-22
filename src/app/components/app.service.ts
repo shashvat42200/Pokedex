@@ -12,6 +12,7 @@ export class AppService {
   userUrl = "https://pokedex-app-c8934-default-rtdb.firebaseio.com/users.json";
   teamsUrl = "https://pokedex-app-c8934-default-rtdb.firebaseio.com/teams.json";
   allUserData = [];
+  activeHomePage = "pokemon";
   isLoggedin = false;
   constructor(private http: HttpClient, private router: Router) {}
 

@@ -3,6 +3,9 @@ import { RouterModule, Routes } from "@angular/router";
 import { LoginComponent } from "./components/login/login.component";
 import { HomeComponent } from "./components/home/home.component";
 import { AuthGuard } from "./user-state/guard/auth.guard";
+import { PokemonComponent } from "./components/pokemon/pokemon.component";
+import { TeamsComponent } from "./components/teams/teams.component";
+import { ItemsComponent } from "./components/items/items.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "/login", pathMatch: "full" },
@@ -11,6 +14,11 @@ const routes: Routes = [
     path: "home",
     component: HomeComponent,
     //canActivate: [AuthGuard],
+    children: [
+      { path: "pokemon", component: PokemonComponent },
+      { path: "teams", component: TeamsComponent },
+      { path: "items", component: ItemsComponent },
+    ],
   },
 ];
 

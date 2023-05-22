@@ -17,6 +17,10 @@ import { UpperBarComponent } from "./components/upper-bar/upper-bar.component";
 import { GeneralCardDisplayComponent } from './components/general-card-display/general-card-display.component';
 import { IndividualPokemonComponent } from './components/individual-pokemon/individual-pokemon.component';
 import { MovesComponent } from './components/moves/moves.component';
+import { PokemonComponent } from './components/pokemon/pokemon.component';
+import { UpperNavBarComponent } from './components/upper-nav-bar/upper-nav-bar.component';
+import { TeamsComponent } from './components/teams/teams.component';
+import { ItemsComponent } from './components/items/items.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +31,10 @@ import { MovesComponent } from './components/moves/moves.component';
     GeneralCardDisplayComponent,
     IndividualPokemonComponent,
     MovesComponent,
+    PokemonComponent,
+    UpperNavBarComponent,
+    TeamsComponent,
+    ItemsComponent,
   ],
   imports: [
     BrowserModule,

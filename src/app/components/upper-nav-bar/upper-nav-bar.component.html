@@ -1,0 +1,23 @@
+<div id="nav-btn-container">
+  <p
+    id="nav-text"
+    [ngClass]="{ active: appService.activeHomePage === 'teams' }"
+    (click)="changehomePage('teams')"
+  >
+    Teams
+  </p>
+  <p
+    id="nav-text"
+    [ngClass]="{ active: appService.activeHomePage === 'pokemon' }"
+    (click)="changehomePage('pokemon')"
+  >
+    Pokemons
+  </p>
+  <p
+    id="nav-text"
+    [ngClass]="{ active: appService.activeHomePage === 'items' }"
+    (click)="changehomePage('items')"
+  >
+    Items
+  </p>
+</div>

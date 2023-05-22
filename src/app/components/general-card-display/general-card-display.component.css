@@ -1,6 +1,6 @@
 #general-card-container {
   display: grid;
-  margin-top: 100px;
+  margin-top: 20px;
   grid-template-columns: 33% 33% 33%;
   place-items: center;
   row-gap: 20px;

@@ -1,0 +1,7 @@
+<app-general-card-display
+  [pokemonData]="pokemonData"
+  *ngIf="dataReceived"
+></app-general-card-display>
+<div id="home-container">
+  <button (click)="loadPokemonData()">Load Next</button>
+</div>
