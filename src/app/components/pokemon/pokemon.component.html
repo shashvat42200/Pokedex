@@ -3,5 +3,8 @@
   *ngIf="dataReceived"
 ></app-general-card-display>
 <div id="home-container">
-  <button (click)="loadPokemonData()">Load Next</button>
+  <div id="button-container">
+    <button (click)="loadPokemonData()" class="bottom-btn">Load Next</button>
+    <button (click)="loadPrevious()" class="bottom-btn">Load Previous</button>
+  </div>
 </div>

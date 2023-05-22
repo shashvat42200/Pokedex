@@ -1,1 +1,31 @@
-<p>items works!</p>
+<div id="items-container">
+  <div id="category-container" *ngFor="let category of itemsData">
+    <p id="category-text">
+      {{ category.name }}
+    </p>
+    <div id="columns-container">
+      <div
+        id="items-container"
+        *ngFor="let item of category.extra.__zone_symbol__value.items"
+      >
+        <p id="item-text">
+          {{ item.name }}
+        </p>
+        <img
+          [src]="
+            'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/' +
+            item.name +
+            '.png'
+          "
+          onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/0.png'"
+          alt=""
+          id="items-img"
+        />
+      </div>
+    </div>
+  </div>
+  <div id="button-container">
+    <button (click)="loadItems()" class="bottom-btn">Load Next</button>
+    <button (click)="loadPrevious()" class="bottom-btn">Load Previous</button>
+  </div>
+</div>

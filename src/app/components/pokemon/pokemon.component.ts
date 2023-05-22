@@ -10,6 +10,7 @@ export class PokemonComponent implements OnInit {
   pokemonData: any = [];
   dataReceived: boolean = false;
   pokedexDataUrl = "https://pokeapi.co/api/v2/pokemon";
+  urlArray = [];
   constructor(private appService: AppService) {}
 
   ngOnInit(): void {
@@ -19,6 +20,8 @@ export class PokemonComponent implements OnInit {
     this.dataReceived = false;
     this.appService.getPokemon(this.pokedexDataUrl).subscribe((data) => {
       this.pokemonData = Object.values(data);
+      if (this.urlArray.includes(this.pokedexDataUrl) === false)
+        this.urlArray.push(this.pokedexDataUrl);
       this.pokedexDataUrl = this.pokemonData[1];
       this.pokemonData = this.pokemonData[3].map((f) => {
         return {
@@ -31,5 +34,10 @@ export class PokemonComponent implements OnInit {
   }
   loadType(url: string): any {
     return this.appService.getPokemon(url).pipe().toPromise();
+  }
+  loadPrevious() {
+    this.pokedexDataUrl = this.urlArray[this.urlArray.length - 2];
+    this.urlArray.splice(this.urlArray.length - 1, 1);
+    this.loadPokemonData();
   }
 }
