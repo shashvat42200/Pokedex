@@ -4,7 +4,13 @@
 ></app-general-card-display>
 <div id="home-container">
   <div id="button-container">
+    <button
+      (click)="loadPrevious()"
+      [disabled]="urlArray.length < 2"
+      class="bottom-btn"
+    >
+      Load Previous
+    </button>
     <button (click)="loadPokemonData()" class="bottom-btn">Load Next</button>
-    <button (click)="loadPrevious()" class="bottom-btn">Load Previous</button>
   </div>
 </div>

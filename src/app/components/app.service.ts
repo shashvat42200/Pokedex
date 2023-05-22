@@ -24,7 +24,7 @@ export class AppService {
         res.forEach((element) => {
           if (element.email === email && element.password === password) {
             this.isLoggedin = true;
-            this.router.navigate(["/home"]);
+            this.router.navigate(["/home/pokemon"]);
             found = element;
           }
         });

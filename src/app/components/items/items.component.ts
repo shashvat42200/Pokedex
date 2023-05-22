@@ -10,6 +10,8 @@ export class ItemsComponent implements OnInit {
   itemsUrl = "https://pokeapi.co/api/v2/item-category?limit=5";
   urlArray = [];
   itemsData = [];
+  dispInfo: boolean[][] = [[], [], [], [], []];
+  itemInfo: any = [];
   constructor(private appService: AppService) {}
 
   ngOnInit(): void {
@@ -33,5 +35,11 @@ export class ItemsComponent implements OnInit {
     this.itemsUrl = this.urlArray[this.urlArray.length - 2];
     this.urlArray.splice(this.urlArray.length - 1, 1);
     this.loadItems();
+  }
+  dispItemInfo(i, j, url) {
+    this.appService.getPokemon(url).subscribe((data) => {
+      this.itemInfo = data;
+    });
+    this.dispInfo[i][j] = true;
   }
 }

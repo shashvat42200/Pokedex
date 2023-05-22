@@ -5,10 +5,18 @@
   text-transform: capitalize;
 }
 #category-container {
+  background-color: white;
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-flow: row;
   border-bottom: 1px solid black;
+}
+#items-container {
+  background-color: #000029;
+  margin: 20px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  box-shadow: 0 0 10px black;
 }
 
 #columns-container {
@@ -16,6 +24,7 @@
   grid-template-columns: 33% 33% 33%;
 }
 #item-text {
+  color: white;
   font-size: 18px;
   font-weight: bold;
   text-align: center;
@@ -24,14 +33,15 @@
 #items-img {
   height: 100px;
   width: 100px;
-  margin-left: 175px;
+  margin-left: 37%;
 }
 #button-container {
+  background-color: white;
   height: 88px;
   width: 102%;
   display: flex;
   justify-content: space-around;
-  margin-top: 20px;
+  padding-top: 20px;
 }
 .bottom-btn {
   margin-top: 20px;
@@ -41,4 +51,27 @@
   background-color: #000029;
   font-size: 15px;
   color: white;
+}
+
+#items-info-container {
+  position: absolute;
+  margin-top: -19px;
+  width: 28.5%;
+  z-index: 2;
+  background-color: white;
+  height: 172px;
+  padding-right: 15px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+#sm-text {
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 10px;
+  text-align: left;
+  text-transform: capitalize;
+}
+#sm-text span {
+  color: red;
 }

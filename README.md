@@ -39,7 +39,7 @@ Selected Pokemon should list all stats and weaknesses
 
 -Should be able to render information about each region(location) in the games
 
--Should make a catagorized list of all the items in the games
+Should make a catagorized list of all the items in the games
 
 Must Be Built In Angular
 
