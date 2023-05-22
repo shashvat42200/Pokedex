@@ -6,6 +6,7 @@ import { AuthGuard } from "./user-state/guard/auth.guard";
 import { PokemonComponent } from "./components/pokemon/pokemon.component";
 import { TeamsComponent } from "./components/teams/teams.component";
 import { ItemsComponent } from "./components/items/items.component";
+import { RegionsComponent } from "./components/regions/regions.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "/login", pathMatch: "full" },
@@ -18,6 +19,7 @@ const routes: Routes = [
       { path: "pokemon", component: PokemonComponent },
       { path: "teams", component: TeamsComponent },
       { path: "items", component: ItemsComponent },
+      { path: "regions", component: RegionsComponent },
     ],
   },
 ];

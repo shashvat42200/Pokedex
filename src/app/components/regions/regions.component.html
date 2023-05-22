@@ -1,0 +1,22 @@
+<div id="region-container" *ngIf="dataLoaded">
+  <div id="flex-container">
+    <img src="./assets/mountain.svg" alt="" id="mountain-img" />
+    <p id="lg-text">{{ regionData[0].name }}</p>
+    <img src="./assets/mountain.svg" alt="" id="mountain-img" />
+  </div>
+  <div id="list-container">
+    <div
+      id="text-container"
+      *ngFor="
+        let location of regionData[0].extra.__zone_symbol__value.locations
+      "
+    >
+      <img src="./assets/location.png" alt="" id="location-img" />
+      <p class="sm-text">{{ location.name }}</p>
+    </div>
+  </div>
+  <div id="button-container">
+    <button (click)="loadPrevious()" class="bottom-btn">Load Previous</button>
+    <button (click)="loadRegion()" class="bottom-btn">Load Next</button>
+  </div>
+</div>

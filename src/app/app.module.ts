@@ -21,6 +21,7 @@ import { PokemonComponent } from './components/pokemon/pokemon.component';
 import { UpperNavBarComponent } from './components/upper-nav-bar/upper-nav-bar.component';
 import { TeamsComponent } from './components/teams/teams.component';
 import { ItemsComponent } from './components/items/items.component';
+import { RegionsComponent } from './components/regions/regions.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ItemsComponent } from './components/items/items.component';
     UpperNavBarComponent,
     TeamsComponent,
     ItemsComponent,
+    RegionsComponent,
   ],
   imports: [
     BrowserModule,

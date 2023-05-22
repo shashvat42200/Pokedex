@@ -20,4 +20,11 @@
   >
     Items
   </p>
+  <p
+    id="nav-text"
+    [ngClass]="{ active: appService.activeHomePage === 'regions' }"
+    (click)="changehomePage('regions')"
+  >
+    Regions
+  </p>
 </div>
