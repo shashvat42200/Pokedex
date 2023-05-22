@@ -139,6 +139,7 @@
   height: 40px;
   width: 40px;
 }
-#next-svg:hover {
-  fill: red;
+
+.move:hover {
+  color: red;
 }

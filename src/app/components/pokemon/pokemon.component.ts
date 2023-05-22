@@ -9,7 +9,7 @@ import { AppService } from "../app.service";
 export class PokemonComponent implements OnInit {
   pokemonData: any = [];
   dataReceived: boolean = false;
-  pokedexDataUrl = "https://pokeapi.co/api/v2/pokemon";
+  pokedexDataUrl = "https://pokeapi.co/api/v2/pokemon?limit=21";
   urlArray = [];
   constructor(private appService: AppService) {}
 
