@@ -1,4 +1,4 @@
-<div id="pokemon-container">
+<div id="pokemon-container" *ngIf="moves == false">
   <div
     id="top-photo-container"
     [class]="pokemonData.extra.__zone_symbol__value.types[0].type.name"
@@ -76,6 +76,61 @@
         }}
       </p>
     </div>
+    <div class="firstrow-info" id="second-row">
+      <div class="flex-div">
+        <img src="./assets/health.png" id="weight-svg" />
+        <p class="sm-text-field">HP</p>
+      </div>
+      <p class="big-text-field">
+        {{ pokemonData.extra.__zone_symbol__value.stats[0].base_stat }}
+      </p>
+      <div class="flex-div">
+        <img src="./assets/attack.png" id="weight-svg" />
+        <p class="sm-text-field">Attack</p>
+      </div>
+      <p class="big-text-field">
+        {{ pokemonData.extra.__zone_symbol__value.stats[1].base_stat }}
+      </p>
+    </div>
+    <div class="firstrow-info" id="second-row">
+      <div class="flex-div">
+        <img src="./assets/defense.png" id="weight-svg" />
+        <p class="sm-text-field">Defense</p>
+      </div>
+      <p class="big-text-field">
+        {{ pokemonData.extra.__zone_symbol__value.stats[2].base_stat }}
+      </p>
+      <div class="flex-div">
+        <img src="./assets/speed.png" id="weight-svg" />
+        <p class="sm-text-field">Speed</p>
+      </div>
+      <p class="big-text-field">
+        {{ pokemonData.extra.__zone_symbol__value.stats[5].base_stat }}
+      </p>
+    </div>
+  </div>
+  <p id="name">Weakness</p>
+  <div id="type-wrapper">
+    <div
+      *ngFor="
+        let Ptype of weakness[
+          pokemonData.extra.__zone_symbol__value.types[0].type.name
+        ]
+      "
+      id="typeSmall-container"
+      [class]="Ptype"
+    >
+      <div id="image-wrapper">
+        <img
+          id="typeSmall-img"
+          [src]="'./assets/small-type/' + Ptype + '.svg'"
+          alt=""
+        />
+      </div>
+      <p id="type-text">
+        {{ Ptype }}
+      </p>
+    </div>
   </div>
   <p id="name">Evolution</p>
   <div
@@ -103,4 +158,11 @@
     />
     <p id="evolution-name">{{ evolution[0] }}</p>
   </div>
+  <p id="name" (click)="dispMoves()">
+    Moves <img src="./assets/arrow-next.svg" alt="" id="next-svg" />
+  </p>
 </div>
+<app-moves
+  *ngIf="moves"
+  [moves]="pokemonData.extra.__zone_symbol__value.moves"
+></app-moves>

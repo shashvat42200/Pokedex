@@ -6,9 +6,8 @@ Due: May 26th - Will Be A Demo Day
 Must use the PokeAPI
 https://pokeapi.co/docs/v2
 
-
 Create a custom pokedex app
--Must have a Login
+Must have a Login
 
 -Logged In user should be able to create custom teams of 6 pokemon to be viewed and edited(logged in users team only for editting).
 
@@ -20,30 +19,27 @@ Create a custom pokedex app
 
 -Logged in user should be able to view teams of other users, but not edit them
 
--Should not be able to view the application UNLESS A user is LOGGED IN
-
+Should not be able to view the application UNLESS A user is LOGGED IN
 
 Pokedex Requirements:
 
--Should be able to render and view ALL pokemon
+Should be able to render and view ALL pokemon
 
--SHould be able to render and view ONE seleceted Pokemon
+SHould be able to render and view ONE seleceted Pokemon
 
---Selected Pokemon should list all information about it
+Selected Pokemon should list all information about it
 
---Selected Pokemon should list all evolve forms as a evolution tree
+Selected Pokemon should list all evolve forms as a evolution tree
 
---Selected Pokemon should list all moves it can learn. Find a creative way of displaying this. I do not want to just see a list of moves. get creative with how you display this section
+Selected Pokemon should list all moves it can learn. Find a creative way of displaying this. I do not want to just see a list of moves. get creative with how you display this section
 
---Selected Pokemon should list all stats and weaknesses
+Selected Pokemon should list all stats and weaknesses
 
 --Selected Pokemon should list which games it can be found in
-
 
 -Should be able to render information about each region(location) in the games
 
 -Should make a catagorized list of all the items in the games
-
 
 Must Be Built In Angular
 
@@ -68,7 +64,6 @@ Must have a theme switcher - Light Mode, and Dark Mode
 Must implement pagination (20 per screen)
 
 Must be 100% responsive- Should be viewed on Mobile, Tablet, and Desktop
-
 
 Stretch-Goals:
 

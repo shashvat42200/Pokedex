@@ -10,7 +10,7 @@ import { AppService } from "../app.service";
 export class HomeComponent implements OnInit {
   pokemonData: any = [];
   dataReceived: boolean = false;
-  pokedexDataUrl = "https://pokeapi.co/api/v2/pokemon?limit=60";
+  pokedexDataUrl = "https://pokeapi.co/api/v2/pokemon";
   constructor(private appService: AppService) {}
 
   ngOnInit(): void {

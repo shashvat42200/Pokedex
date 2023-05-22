@@ -88,11 +88,14 @@
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
-#back-arrow {
+.back-arrow {
   height: 50px;
   width: 50px;
   margin-top: 225px;
   margin-left: -300px;
   position: absolute;
   z-index: 3;
+}
+.moveArrow {
+  margin-left: -500px;
 }

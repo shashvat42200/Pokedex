@@ -1,0 +1,59 @@
+#moves-container {
+  width: 360px;
+  position: absolute;
+  z-index: 2;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 200px;
+  margin-left: -185px;
+  padding-top: 100px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+#weight-svg {
+  height: 15px;
+  width: 15px;
+  margin-top: 21px;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+#flex-container {
+  display: flex;
+  margin-left: 20px;
+}
+#moves-text {
+  text-transform: capitalize;
+}
+#indMoves-container {
+  width: 360px;
+  margin-top: 100px;
+  margin-left: 100px;
+  padding-right: 20px;
+  position: absolute;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px black;
+  z-index: 4;
+}
+#close-svg {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+#lg-text {
+  font-size: 18px;
+  margin-left: 20px;
+  font-weight: bold;
+}
+#lg-text span {
+  color: red;
+  margin-left: 10px;
+}
+#move-name {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+#moves-text:hover {
+  color: red;
+}

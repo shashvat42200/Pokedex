@@ -10,7 +10,28 @@ import { map } from "rxjs";
 export class IndividualPokemonComponent implements OnInit {
   @Input() pokemonData;
   evolutionData: any = {};
+  moves: boolean = false;
   filteredEvolutionData = [];
+  weakness: object = {
+    normal: ["fighting"],
+    fighting: ["flying", "psychic", "fairy"],
+    flying: ["rock", "electric", "ice"],
+    poison: ["ground", "psychic"],
+    ground: ["water", "grass", "ice"],
+    rock: ["fighting", "ground", "steel", "water", "grass"],
+    bug: ["flying", "rock", "fire"],
+    ghost: ["ghost", "dark"],
+    steel: ["fighting", "ground", "fire"],
+    fire: ["ground", "rock", "water"],
+    water: ["grass", "electric"],
+    grass: ["flying", "poison", "bug", "fire", "ice"],
+    electric: ["ground"],
+    psychic: ["bug", "ghost", "dark"],
+    ice: ["fighting", "rock", "steel", "fire"],
+    dragon: ["ice", "dragon", "fairy"],
+    fairy: ["poison", "steel"],
+    dark: ["fighting", "bug", "fairy"],
+  };
   constructor(private appService: AppService) {}
 
   ngOnInit(): void {
@@ -51,5 +72,8 @@ export class IndividualPokemonComponent implements OnInit {
 
   spliceStringUrl(str: string) {
     return str.split("/")[str.split("/").length - 2];
+  }
+  dispMoves() {
+    this.moves = !this.moves;
   }
 }
