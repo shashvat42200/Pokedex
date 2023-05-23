@@ -63,3 +63,29 @@
   width: 20px;
   object-fit: cover;
 }
+#region-info-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  position: absolute;
+  box-shadow: 0 0 10px black;
+  width: 225px;
+  z-index: 2;
+  background-color: white;
+}
+#close-svg {
+  margin-top: 20px;
+}
+.sm-text:hover {
+  color: red;
+}
+#heading {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: capitalize;
+}
+#sm-txt {
+  margin-left: -10px;
+  text-transform: capitalize;
+}

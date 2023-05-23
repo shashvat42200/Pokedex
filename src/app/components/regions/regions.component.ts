@@ -9,6 +9,8 @@ import { AppService } from "../app.service";
 export class RegionsComponent implements OnInit {
   regionUrl = "https://pokeapi.co/api/v2/region?limit=1";
   regionData: any = [];
+  dispInfo: boolean[] = [];
+  dispData: any = [];
   dataLoaded: boolean = false;
   urlArray = [];
   constructor(private appService: AppService) {}
@@ -36,5 +38,16 @@ export class RegionsComponent implements OnInit {
     this.regionUrl = this.urlArray[this.urlArray.length - 2];
     this.urlArray.splice(this.urlArray.length - 1, 1);
     this.loadRegion();
+  }
+  dispRegionInfo(i) {
+    this.appService
+      .getPokemon(
+        this.regionData[0].extra.__zone_symbol__value.locations[i].url
+      )
+      .subscribe((data) => {
+        this.dispData = data;
+        this.dispInfo[i] = true;
+        console.log(this.dispData);
+      });
   }
 }
