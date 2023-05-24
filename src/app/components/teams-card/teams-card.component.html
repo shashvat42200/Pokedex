@@ -1,0 +1,38 @@
+<div id="indTeam-container" *ngIf="dispTeam">
+  <button
+    id="addPok"
+    (click)="addPokemon(teamdata[0])"
+    *ngIf="teamdata.length - 1 < 6"
+  >
+    Add Pokemon
+  </button>
+  <button id="addPok" (click)="deletebtn = true">Edit Pokemons</button>
+  <div
+    id="pokemon-container"
+    *ngFor="let pokemon of teamdata | slice : 1 : 7; let i = index; keyvalue"
+  >
+    <img
+      [class]="pokemon['type']"
+      id="typeSmall-img"
+      [src]="'./assets/' + pokemon['type'] + '.svg'"
+      alt=""
+    />
+    <img
+      [src]="
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' +
+        pokemon['id'] +
+        '.png'
+      "
+      alt=""
+      id="pokemon-img"
+    />
+    <p class="pok-name">{{ pokemon["name"] }}</p>
+    <img
+      (click)="deletePokemon(teamdata[0], i)"
+      *ngIf="deletebtn"
+      id="del-svg"
+      src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Icons8_flat_delete_generic.svg"
+      alt=""
+    />
+  </div>
+</div>

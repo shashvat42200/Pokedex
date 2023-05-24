@@ -10,10 +10,12 @@ import { Router } from "@angular/router";
 export class AppService {
   allUrl = "https://pokedex-app-c8934-default-rtdb.firebaseio.com/.json";
   userUrl = "https://pokedex-app-c8934-default-rtdb.firebaseio.com/users.json";
-  teamsUrl = "https://pokedex-app-c8934-default-rtdb.firebaseio.com/teams.json";
+  teamsUrl = "https://pokedex-app-c8934-default-rtdb.firebaseio.com/teams/";
   allUserData = [];
   activeHomePage = "pokemon";
   isLoggedin = false;
+  addingPokemon: boolean = false;
+  addingPokemonData: any = [];
   constructor(private http: HttpClient, private router: Router) {}
 
   getUserInfo(email: string, password: string): Observable<any> {
@@ -35,5 +37,11 @@ export class AppService {
 
   getPokemon(url: string): Observable<any> {
     return this.http.get<any>(url);
+  }
+  postPokemon(uid, data): Observable<any> {
+    return this.http.patch(this.teamsUrl + uid + ".json", data);
+  }
+  deletePokemon(uid, id): Observable<any> {
+    return this.http.delete(this.teamsUrl + uid + "/member" + id + ".json");
   }
 }

@@ -22,6 +22,7 @@ import { UpperNavBarComponent } from './components/upper-nav-bar/upper-nav-bar.c
 import { TeamsComponent } from './components/teams/teams.component';
 import { ItemsComponent } from './components/items/items.component';
 import { RegionsComponent } from './components/regions/regions.component';
+import { TeamsCardComponent } from './components/teams-card/teams-card.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { RegionsComponent } from './components/regions/regions.component';
     TeamsComponent,
     ItemsComponent,
     RegionsComponent,
+    TeamsCardComponent,
   ],
   imports: [
     BrowserModule,

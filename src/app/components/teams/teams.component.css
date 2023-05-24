@@ -1,0 +1,16 @@
+#addTeam-container {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  margin-top: 50px;
+}
+#addteam-btn {
+  height: 50px;
+  width: 248px;
+  background-color: #000029;
+  color: white;
+  border-radius: 24px;
+}
+#allTeams-container {
+  margin-left: 20px;
+}
