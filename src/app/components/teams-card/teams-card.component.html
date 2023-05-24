@@ -12,23 +12,23 @@
     *ngFor="let pokemon of teamdata | slice : 1 : 7; let i = index; keyvalue"
   >
     <img
-      [class]="pokemon['type']"
+      [class]="pokemon[1]['type']"
       id="typeSmall-img"
-      [src]="'./assets/' + pokemon['type'] + '.svg'"
+      [src]="'./assets/' + pokemon[1]['type'] + '.svg'"
       alt=""
     />
     <img
       [src]="
         'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' +
-        pokemon['id'] +
+        pokemon[1]['id'] +
         '.png'
       "
       alt=""
       id="pokemon-img"
     />
-    <p class="pok-name">{{ pokemon["name"] }}</p>
+    <p class="pok-name">{{ pokemon[1]["name"] }}</p>
     <img
-      (click)="deletePokemon(teamdata[0], i)"
+      (click)="deletePokemon(teamdata[0], pokemon[0], i)"
       *ngIf="deletebtn"
       id="del-svg"
       src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Icons8_flat_delete_generic.svg"

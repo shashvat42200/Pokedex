@@ -18,16 +18,17 @@ export class GeneralCardDisplayComponent implements OnInit {
   }
   dispPokemonCard(pokemon: any) {
     if (this.appService.addingPokemon) {
-      let length = this.appService.addingPokemonData.length - 1;
+      console.log(this.appService.addingPokemonData);
+      let length = this.appService.addingPokemonData.length;
+      console.log(length);
       let data = {
-        ["member" + length]: {
-          id: pokemon.extra.__zone_symbol__value.id,
-          name: pokemon.name,
-          type: pokemon.extra.__zone_symbol__value.types[0].type.name,
-        },
+        id: pokemon.extra.__zone_symbol__value.id,
+        name: pokemon.name,
+        type: pokemon.extra.__zone_symbol__value.types[0].type.name,
       };
+
       this.appService
-        .postPokemon(this.appService.addingPokemonData[0], data)
+        .postPokemon(this.appService.addingPokemonData[0], JSON.stringify(data))
         .subscribe(
           (res) => {
             this.appService.addingPokemon = false;

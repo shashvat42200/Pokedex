@@ -17,7 +17,12 @@ export class TeamsComponent implements OnInit {
   loadTeams() {
     this.appService.getPokemon(this.teamsUrl).subscribe((data) => {
       this.teamsData = Object.keys(data).map((f) => {
-        return [f, ...Object.values(data[f])];
+        return [
+          f,
+          ...Object.keys(data[f]).map((i) => {
+            return [i, data[f][i]];
+          }),
+        ];
       });
       console.log(this.teamsData);
     });

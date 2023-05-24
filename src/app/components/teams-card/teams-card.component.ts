@@ -24,9 +24,9 @@ export class TeamsCardComponent implements OnInit {
     this.appService.addingPokemon = true;
     this.router.navigate(["/home/pokemon"]);
   }
-  deletePokemon(uid, id) {
+  deletePokemon(uid, id, index) {
     this.appService.deletePokemon(uid, id).subscribe((err) => console.log(err));
-    this.teamdata.splice(id + 1, 1);
+    this.teamdata.splice(index + 1, 1);
     this.deletebtn = false;
   }
 }

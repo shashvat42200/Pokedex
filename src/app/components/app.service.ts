@@ -39,9 +39,9 @@ export class AppService {
     return this.http.get<any>(url);
   }
   postPokemon(uid, data): Observable<any> {
-    return this.http.patch(this.teamsUrl + uid + ".json", data);
+    return this.http.post(this.teamsUrl + uid + ".json", data);
   }
   deletePokemon(uid, id): Observable<any> {
-    return this.http.delete(this.teamsUrl + uid + "/member" + id + ".json");
+    return this.http.delete(this.teamsUrl + uid + "/" + id + ".json");
   }
 }
