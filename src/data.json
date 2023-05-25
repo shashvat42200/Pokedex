@@ -25,7 +25,16 @@
         "id": 7,
         "type": "water",
         "name": "squirtle"
-      }
+      },
+      "createdBy": "asdf@gmail.com"
+    },
+    "dsafhjelsss": {
+      "ddfjknasdfdn": {
+        "id": 1,
+        "type": "grass",
+        "name": "bulbasuar"
+      },
+      "createdBy": "loki@gmail.com"
     }
   }
 }

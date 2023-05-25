@@ -1,5 +1,7 @@
 #pokemon-container {
-  width: 360px;
+  width: 760px;
+  display: flex;
+  flex-wrap: wrap;
   position: absolute;
   z-index: 2;
   background-color: white;
@@ -142,4 +144,10 @@
 
 .move:hover {
   color: red;
+}
+@media only screen and (max-width: 375px) {
+  #pokemon-container {
+    width: 360px;
+    display: block;
+  }
 }

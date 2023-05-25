@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { AppService } from "../app.service";
 import { Router } from "@angular/router";
-import { error } from "console";
+import { Store } from "@ngrx/store";
+import { user } from "src/app/user-state/selector/user.selector";
 
 @Component({
   selector: "app-teams-card",
@@ -12,11 +13,20 @@ export class TeamsCardComponent implements OnInit {
   @Input() teamdata;
   dispTeam: boolean = false;
   deletebtn: boolean = false;
-  constructor(private appService: AppService, private router: Router) {}
+  createdBy: any = "";
+  constructor(
+    private appService: AppService,
+    private router: Router,
+    private store: Store
+  ) {}
 
   ngOnInit(): void {
+    this.store.select(user).subscribe((data) => {
+      this.createdBy = data.email;
+    });
     setTimeout(() => {
       this.dispTeam = true;
+      console.log(this.teamdata);
     }, 500);
   }
   addPokemon(uid) {

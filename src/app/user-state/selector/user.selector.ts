@@ -17,3 +17,7 @@ export const isLoggedIn = createSelector(
   createFeatureSelector("users"),
   (state: User) => !!state
 );
+export const user = createSelector(
+  createFeatureSelector("users"),
+  (state: User) => state
+);

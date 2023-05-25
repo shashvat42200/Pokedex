@@ -16,6 +16,7 @@ export class AppService {
   isLoggedin = false;
   addingPokemon: boolean = false;
   addingPokemonData: any = [];
+  tempUID = "";
   constructor(private http: HttpClient, private router: Router) {}
 
   getUserInfo(email: string, password: string): Observable<any> {
@@ -39,6 +40,12 @@ export class AppService {
     return this.http.get<any>(url);
   }
   postPokemon(uid, data): Observable<any> {
+    return this.http.post(this.teamsUrl + uid + ".json", data);
+  }
+  postTempTeam(data): Observable<any> {
+    return this.http.post(this.teamsUrl + ".json", data);
+  }
+  postTeam(uid, data): Observable<any> {
     return this.http.post(this.teamsUrl + uid + ".json", data);
   }
   deletePokemon(uid, id): Observable<any> {

@@ -86,3 +86,11 @@
     border-image: linear-gradient(360deg, red, white, blue) 1;
   }
 }
+@media only screen and (max-width: 375px) {
+  #columns-container {
+    grid-template-columns: 100%;
+  }
+  #items-info-container {
+    width: 83%;
+  }
+}
