@@ -3,6 +3,7 @@ import { Store } from "@ngrx/store";
 import { getUsers } from "src/app/user-state/actions/user.action";
 import { Router } from "@angular/router";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
+import { AppService } from "../app.service";
 
 @Component({
   selector: "app-login",
@@ -11,11 +12,16 @@ import { FormControl, FormGroup, Validators } from "@angular/forms";
 })
 export class LoginComponent implements OnInit {
   submitted: boolean = false;
+  register: boolean = false;
   formGroup = new FormGroup({
     email: new FormControl("asdf@gmail.com", Validators.required),
     password: new FormControl("12345", Validators.required),
   });
-  constructor(private store: Store, private router: Router) {}
+  constructor(
+    private store: Store,
+    private router: Router,
+    private appService: AppService
+  ) {}
   ngOnInit() {}
   login() {
     this.submitted = true;
@@ -26,6 +32,18 @@ export class LoginComponent implements OnInit {
           password: this.formGroup.value.password,
         })
       );
+    }
+  }
+  registerUser() {
+    this.submitted = true;
+    if (this.formGroup.valid) {
+      let data = {
+        email: this.formGroup.value.email,
+        password: this.formGroup.value.password,
+      };
+      this.appService.postUser(JSON.stringify(data)).subscribe((data) => {
+        this.register = false;
+      });
     }
   }
 }

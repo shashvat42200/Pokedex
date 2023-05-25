@@ -21,7 +21,30 @@
           'has-error': formGroup.controls['password'].invalid && submitted
         }"
       />
-      <button value="Log In" (click)="login()" id="login-btn">Log In</button>
+      <button
+        value="Log In"
+        (click)="login()"
+        id="login-btn"
+        *ngIf="register == false"
+      >
+        Log In
+      </button>
+      <button
+        value="Log In"
+        (click)="registerUser()"
+        id="login-btn"
+        *ngIf="register"
+      >
+        Submit
+      </button>
+      <button
+        value="Log In"
+        (click)="register = true"
+        id="login-btn"
+        *ngIf="register == false"
+      >
+        Register
+      </button>
     </form>
   </div>
   <img src="./assets/Group 41.png" class="side-img" />

@@ -35,7 +35,9 @@ export class AppService {
       })
     );
   }
-
+  postUser(data): Observable<any> {
+    return this.http.post(this.userUrl, data);
+  }
   getPokemon(url: string): Observable<any> {
     return this.http.get<any>(url);
   }
