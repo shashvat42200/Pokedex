@@ -21,23 +21,25 @@
       id="pokemon-profile"
     />
   </div>
-  <p id="name">{{ pokemonData.name }}</p>
-  <div id="type-wrapper">
-    <div
-      *ngFor="let Ptype of pokemonData.extra.__zone_symbol__value.types"
-      id="typeSmall-container"
-      [class]="Ptype.type.name"
-    >
-      <div id="image-wrapper">
-        <img
-          id="typeSmall-img"
-          [src]="'./assets/small-type/' + Ptype.type.name + '.svg'"
-          alt=""
-        />
+  <div id="name-container">
+    <p id="name">{{ pokemonData.name }}</p>
+    <div id="type-wrapper" class="type-container">
+      <div
+        *ngFor="let Ptype of pokemonData.extra.__zone_symbol__value.types"
+        id="typeSmall-container"
+        [class]="Ptype.type.name"
+      >
+        <div id="image-wrapper">
+          <img
+            id="typeSmall-img"
+            [src]="'./assets/small-type/' + Ptype.type.name + '.svg'"
+            alt=""
+          />
+        </div>
+        <p id="type-text">
+          {{ Ptype.type.name }}
+        </p>
       </div>
-      <p id="type-text">
-        {{ Ptype.type.name }}
-      </p>
     </div>
   </div>
   <div id="info-container">
@@ -109,27 +111,29 @@
       </p>
     </div>
   </div>
-  <p id="name">Weakness</p>
-  <div id="type-wrapper">
-    <div
-      *ngFor="
-        let Ptype of weakness[
-          pokemonData.extra.__zone_symbol__value.types[0].type.name
-        ]
-      "
-      id="typeSmall-container"
-      [class]="Ptype"
-    >
-      <div id="image-wrapper">
-        <img
-          id="typeSmall-img"
-          [src]="'./assets/small-type/' + Ptype + '.svg'"
-          alt=""
-        />
+  <div id="weakness-container">
+    <p id="name">Weakness</p>
+    <div id="type-wrapper" class="weakness">
+      <div
+        *ngFor="
+          let Ptype of weakness[
+            pokemonData.extra.__zone_symbol__value.types[0].type.name
+          ]
+        "
+        id="typeSmall-container"
+        [class]="Ptype"
+      >
+        <div id="image-wrapper">
+          <img
+            id="typeSmall-img"
+            [src]="'./assets/small-type/' + Ptype + '.svg'"
+            alt=""
+          />
+        </div>
+        <p id="type-text">
+          {{ Ptype }}
+        </p>
       </div>
-      <p id="type-text">
-        {{ Ptype }}
-      </p>
     </div>
   </div>
   <p id="name">Evolution</p>

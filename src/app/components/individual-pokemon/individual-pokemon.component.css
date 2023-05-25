@@ -8,7 +8,8 @@
   border-radius: 10px;
   margin-top: 200px;
   overflow: hidden;
-  margin-left: -185px;
+  margin-left: -385px;
+  padding-bottom: 50px;
 }
 #top-photo-container {
   margin-top: -250px;
@@ -32,6 +33,7 @@
   height: 250px;
   width: 200px;
   transform: scaleX(-1);
+  padding-bottom: 50px;
 }
 #name {
   font-weight: bolder;
@@ -41,11 +43,14 @@
   margin-left: 20px;
 }
 #type-wrapper {
+  align-items: center;
   display: flex;
   margin-left: 20px;
   row-gap: 10px;
   column-gap: 10px;
-  flex-wrap: wrap;
+}
+.weakness {
+  flex-direction: column;
 }
 #image-wrapper {
   background-color: white;
@@ -84,7 +89,7 @@
 }
 .firstrow-info {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 60% 60%;
   grid-template-rows: 30% 70%;
 }
 #weight-svg {
@@ -104,6 +109,12 @@
   grid-row: 2;
   margin-top: 0px;
   text-transform: capitalize;
+}
+#name-container {
+  margin-left: 75px;
+}
+.move {
+  padding-right: 200px;
 }
 .flex-div {
   display: flex;
@@ -132,10 +143,14 @@
   object-fit: cover;
 }
 #evolution-name {
-  margin-left: 300px;
+  margin-top: 200px;
+  margin-left: 0px;
   position: absolute;
   font-size: 18px;
   text-transform: capitalize;
+}
+#weakness-container {
+  margin-left: 100px;
 }
 #next-svg {
   height: 40px;
@@ -149,5 +164,22 @@
   #pokemon-container {
     width: 360px;
     display: block;
+    margin-left: -185px;
+  }
+  #evolution-name {
+    margin-top: 0px;
+    margin-left: 300px;
+  }
+  #type-wrapper {
+    align-items: left;
+    flex-wrap: wrap;
+  }
+  #weakness-container {
+    margin-left: 0px;
+  }
+  .firstrow-info {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 70%;
   }
 }

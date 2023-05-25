@@ -44,3 +44,14 @@ input[type="textbox"] {
   border-radius: 10px;
   text-align: center;
 }
+@media only screen and (max-width: 375px) {
+  .side-img {
+    display: none;
+  }
+  input[type="textbox"] {
+    margin-left: 20px;
+  }
+  #login-btn {
+    margin-left: 50px;
+  }
+}
