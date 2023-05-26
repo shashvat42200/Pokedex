@@ -1,5 +1,9 @@
+<div id="search-container">
+  <img src="./assets/search.svg" id="search-svg" />
+  <input type="textbox" id="search-tb" [(ngModel)]="filtertype" />
+</div>
 <app-general-card-display
-  [pokemonData]="pokemonData"
+  [pokemonData]="pokemonData | filterData : filtertype"
   *ngIf="dataReceived"
 ></app-general-card-display>
 <div id="home-container">

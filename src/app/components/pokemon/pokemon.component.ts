@@ -8,11 +8,11 @@ import { AppService } from "../app.service";
 })
 export class PokemonComponent implements OnInit {
   pokemonData: any = [];
+  filtertype = "";
   dataReceived: boolean = false;
   pokedexDataUrl = "https://pokeapi.co/api/v2/pokemon?limit=21";
   urlArray = [];
   constructor(private appService: AppService) {}
-
   ngOnInit(): void {
     this.loadPokemonData();
   }
@@ -29,6 +29,7 @@ export class PokemonComponent implements OnInit {
           extra: this.loadType(f.url),
         };
       });
+      console.log(this.pokemonData);
       setTimeout(() => (this.dataReceived = true), 500);
     });
   }
@@ -39,5 +40,9 @@ export class PokemonComponent implements OnInit {
     this.pokedexDataUrl = this.urlArray[this.urlArray.length - 2];
     this.urlArray.splice(this.urlArray.length - 1, 1);
     this.loadPokemonData();
+  }
+  changeFiltertype(str) {
+    console.log(str);
+    this.filtertype = str;
   }
 }

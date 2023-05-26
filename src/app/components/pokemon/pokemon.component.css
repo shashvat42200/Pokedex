@@ -14,3 +14,29 @@
   font-size: 15px;
   color: white;
 }
+#search-container {
+  margin-left: 455px;
+  display: flex;
+  justify-self: center;
+  margin-top: 20px;
+  width: 320px;
+  height: 48px;
+  border-radius: 24px;
+  border: 1px solid black;
+}
+#search-tb {
+  text-indent: 20px;
+  width: 262px;
+  border-radius: 24px;
+}
+#search-svg {
+  margin-top: 5px;
+  margin-left: 10px;
+  height: 40px;
+  width: 40px;
+}
+@media only screen and (max-width: 375px) {
+  #search-container {
+    margin-left: 25px;
+  }
+}

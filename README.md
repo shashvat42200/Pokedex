@@ -9,15 +9,15 @@ https://pokeapi.co/docs/v2
 Create a custom pokedex app
 Must have a Login
 
--Logged In user should be able to create custom teams of 6 pokemon to be viewed and edited(logged in users team only for editting).
+Logged In user should be able to create custom teams of 6 pokemon to be viewed and edited(logged in users team only for editting).
 
--Logged In user should be able to create multiple teams
+Logged In user should be able to create multiple teams
 
 -Logged In User should not be able to select a pokemon that is already a part of a user's team
 
 -Logged in user should be able to create and customize their profile
 
--Logged in user should be able to view teams of other users, but not edit them
+Logged in user should be able to view teams of other users, but not edit them
 
 Should not be able to view the application UNLESS A user is LOGGED IN
 
@@ -37,7 +37,7 @@ Selected Pokemon should list all stats and weaknesses
 
 --Selected Pokemon should list which games it can be found in
 
--Should be able to render information about each region(location) in the games
+Should be able to render information about each region(location) in the games
 
 Should make a catagorized list of all the items in the games
 

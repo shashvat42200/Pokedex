@@ -23,6 +23,7 @@ import { TeamsComponent } from './components/teams/teams.component';
 import { ItemsComponent } from './components/items/items.component';
 import { RegionsComponent } from './components/regions/regions.component';
 import { TeamsCardComponent } from './components/teams-card/teams-card.component';
+import { FilterDataPipe } from './pipes/filter-data.pipe';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { TeamsCardComponent } from './components/teams-card/teams-card.component
     ItemsComponent,
     RegionsComponent,
     TeamsCardComponent,
+    FilterDataPipe,
   ],
   imports: [
     BrowserModule,
