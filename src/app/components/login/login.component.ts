@@ -14,8 +14,8 @@ export class LoginComponent implements OnInit {
   submitted: boolean = false;
   register: boolean = false;
   formGroup = new FormGroup({
-    email: new FormControl("asdf@gmail.com", Validators.required),
-    password: new FormControl("12345", Validators.required),
+    email: new FormControl("", Validators.required),
+    password: new FormControl("", Validators.required),
   });
   constructor(
     private store: Store,

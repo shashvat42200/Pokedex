@@ -14,7 +14,7 @@ const routes: Routes = [
   {
     path: "home",
     component: HomeComponent,
-    //canActivate: [AuthGuard],
+    canActivate: [AuthGuard],
     children: [
       { path: "pokemon", component: PokemonComponent },
       { path: "teams", component: TeamsComponent },
