@@ -14,3 +14,9 @@
 .active {
   border-bottom: 1px solid white;
 }
+@media only screen and (max-width: 375px) {
+  #nav-btn-container {
+    width: 103%;
+    margin-left: -10px;
+  }
+}

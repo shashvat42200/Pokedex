@@ -4,6 +4,7 @@
   justify-content: end;
   margin-top: -75px;
   position: absolute;
+  margin-left: -50px;
 }
 #addteam-btn {
   height: 50px;
@@ -22,5 +23,10 @@
 @media only screen and (max-width: 375px) {
   #allTeams-container {
     grid-template-columns: 100%;
+    margin-left: 5px;
+  }
+  #addTeam-container {
+    justify-content: center;
+    margin-left: -5px;
   }
 }

@@ -13,7 +13,7 @@ Logged In user should be able to create custom teams of 6 pokemon to be viewed a
 
 Logged In user should be able to create multiple teams
 
--Logged In User should not be able to select a pokemon that is already a part of a user's team
+Logged In User should not be able to select a pokemon that is already a part of a user's team
 
 -Logged in user should be able to create and customize their profile
 

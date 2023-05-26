@@ -54,4 +54,9 @@ input[type="textbox"] {
   #login-btn {
     margin-left: 50px;
   }
+  #login-container {
+    margin-left: -10px;
+    overflow-x: hidden;
+    column-gap: 0px;
+  }
 }
