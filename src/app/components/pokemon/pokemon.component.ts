@@ -29,7 +29,6 @@ export class PokemonComponent implements OnInit {
           extra: this.loadType(f.url),
         };
       });
-      console.log(this.pokemonData);
       setTimeout(() => (this.dataReceived = true), 500);
     });
   }

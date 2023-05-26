@@ -43,7 +43,6 @@ export class TeamsComponent implements OnInit {
     };
     this.appService.postTempTeam(JSON.stringify(create)).subscribe((data) => {
       this.appService.tempUID = data.name;
-      console.log(data);
     });
     this.appService.addingPokemon = true;
     this.router.navigate(["home/pokemon"]);

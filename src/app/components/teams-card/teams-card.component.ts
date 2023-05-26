@@ -26,7 +26,6 @@ export class TeamsCardComponent implements OnInit {
     });
     setTimeout(() => {
       this.dispTeam = true;
-      console.log(this.teamdata);
     }, 500);
   }
   addPokemon(uid) {
