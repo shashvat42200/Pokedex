@@ -4,7 +4,7 @@
     id="addPok"
     (click)="addPokemon(teamdata[0])"
     *ngIf="
-      teamdata.length - 1 < 6 && teamdata[teamdata.length - 1][1] === createdBy
+      teamdata.length - 2 < 6 && teamdata[teamdata.length - 1][1] === createdBy
     "
   >
     Add Pokemon
