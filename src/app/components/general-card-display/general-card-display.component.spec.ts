@@ -1,16 +1,18 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { GeneralCardDisplayComponent } from './general-card-display.component';
+import { GeneralCardDisplayComponent } from "./general-card-display.component";
+import { HttpClientModule } from "@angular/common/http";
+import { RouterTestingModule } from "@angular/router/testing";
 
-describe('GeneralCardDisplayComponent', () => {
+describe("GeneralCardDisplayComponent", () => {
   let component: GeneralCardDisplayComponent;
   let fixture: ComponentFixture<GeneralCardDisplayComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GeneralCardDisplayComponent ]
-    })
-    .compileComponents();
+      imports: [HttpClientModule, RouterTestingModule],
+      declarations: [GeneralCardDisplayComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -19,7 +21,7 @@ describe('GeneralCardDisplayComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it("should create", () => {
+    expect(component.pokemonData).toBeDefined();
   });
 });
