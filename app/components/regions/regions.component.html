@@ -1,0 +1,35 @@
+<div id="region-container" *ngIf="dataLoaded">
+  <div id="flex-container">
+    <img src="./assets/mountain.svg" alt="" id="mountain-img" />
+    <p id="lg-text">{{ regionData[0].name }}</p>
+    <img src="./assets/mountain.svg" alt="" id="mountain-img" />
+  </div>
+  <div id="list-container">
+    <div
+      id="text-container"
+      *ngFor="
+        let location of regionData[0].extra.__zone_symbol__value.locations;
+        let i = index
+      "
+    >
+      <div id="region-info-container" *ngIf="dispInfo[i]">
+        <img
+          src="./assets/close.svg"
+          alt=""
+          (click)="dispInfo[i] = false"
+          id="close-svg"
+        />
+        <p id="heading">{{ location.name }}'s Areas</p>
+        <ul *ngFor="let area of dispData.areas">
+          <p id="sm-txt">~ {{ area.name }}</p>
+        </ul>
+      </div>
+      <img src="./assets/location.png" alt="" id="location-img" />
+      <p class="sm-text" (click)="dispRegionInfo(i)">{{ location.name }}</p>
+    </div>
+  </div>
+  <div id="button-container">
+    <button (click)="loadPrevious()" class="bottom-btn">Load Previous</button>
+    <button (click)="loadRegion()" class="bottom-btn">Load Next</button>
+  </div>
+</div>

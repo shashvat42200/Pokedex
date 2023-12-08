@@ -1,0 +1,40 @@
+{
+  "users": {
+    "dsaffgfsdfs": {
+      "email": "asdf@gmail.com",
+      "password": "12345"
+    },
+    "dsaffgfszzz": {
+      "email": "loki@gmail.com",
+      "password": "98765"
+    }
+  },
+  "teams": {
+    "dsafhjelffs": {
+      "ddfjknaskjdn": {
+        "id": 1,
+        "type": "grass",
+        "name": "bulbasuar"
+      },
+      "nhjyjhgjfjrt": {
+        "id": 4,
+        "type": "fire",
+        "name": "charmender"
+      },
+      "ntrthdsgdsvsd": {
+        "id": 7,
+        "type": "water",
+        "name": "squirtle"
+      },
+      "createdBy": "asdf@gmail.com"
+    },
+    "dsafhjelsss": {
+      "ddfjknasdfdn": {
+        "id": 1,
+        "type": "grass",
+        "name": "bulbasuar"
+      },
+      "createdBy": "loki@gmail.com"
+    }
+  }
+}

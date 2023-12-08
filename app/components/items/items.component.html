@@ -1,0 +1,60 @@
+<div id="item-container">
+  <div
+    id="category-container"
+    *ngFor="let category of itemsData; let i = index"
+  >
+    <p id="category-text">
+      {{ category.name }}
+    </p>
+    <div id="columns-container">
+      <div
+        id="items-container"
+        *ngFor="
+          let item of category.extra.__zone_symbol__value.items;
+          let j = index
+        "
+      >
+        <div
+          id="wrapper"
+          (mouseenter)="dispItemInfo(i, j, item.url)"
+          (mouseleave)="dispInfo[i][j] = false"
+        >
+          <div id="items-info-container" *ngIf="dispInfo[i][j]">
+            <p id="sm-text">
+              Name: <span>{{ item.name }}</span>
+            </p>
+            <p id="sm-text">
+              Cost: <span>{{ itemInfo.cost }}</span>
+            </p>
+            <p id="sm-text">
+              Description:
+              <span>{{
+                itemInfo?.effect_entries[0]?.short_effect || "N/A"
+              }}</span>
+            </p>
+            <p id="sm-text">
+              Fling Power: <span>{{ itemInfo.fling_power }}</span>
+            </p>
+          </div>
+          <p id="item-text">
+            {{ item.name }}
+          </p>
+          <img
+            [src]="
+              'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/' +
+              item.name +
+              '.png'
+            "
+            onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/0.png'"
+            alt=""
+            id="items-img"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="button-container">
+    <button (click)="loadPrevious()" class="bottom-btn">Load Previous</button>
+    <button (click)="loadItems()" class="bottom-btn">Load Next</button>
+  </div>
+</div>

@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+html {
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+body {
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+.water {
+  background-color: #5090d6;
+}
+.dragon {
+  background-color: #0b6dc3;
+}
+.electric {
+  background-color: #f4d23c;
+}
+.fairy {
+  background-color: #ec8fe6;
+}
+.ghost {
+  background-color: #5269ad;
+}
+.fire {
+  background-color: #ff9d55;
+}
+.ice {
+  background-color: #73cec0;
+}
+.grass {
+  background-color: #63bc5a;
+}
+.bug {
+  background-color: #91c12f;
+}
+.fighting {
+  background-color: #ce416b;
+}
+.normal {
+  background-color: #919aa2;
+}
+.dark {
+  background-color: #5a5465;
+}
+.steel {
+  background-color: #5a8ea2;
+}
+.rock {
+  background-color: #c5b78c;
+}
+.psychic {
+  background-color: #fa7179;
+}
+.ground {
+  background-color: #d97845;
+}
+.poison {
+  background-color: #b567ce;
+}
+.flying {
+  background-color: #89aae3;
+}

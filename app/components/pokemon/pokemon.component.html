@@ -1,0 +1,20 @@
+<div id="search-container">
+  <img src="./assets/search.svg" id="search-svg" />
+  <input type="textbox" id="search-tb" [(ngModel)]="filtertype" />
+</div>
+<app-general-card-display
+  [pokemonData]="pokemonData | filterData : filtertype"
+  *ngIf="dataReceived"
+></app-general-card-display>
+<div id="home-container">
+  <div id="button-container">
+    <button
+      (click)="loadPrevious()"
+      [disabled]="urlArray.length < 2"
+      class="bottom-btn"
+    >
+      Load Previous
+    </button>
+    <button (click)="loadPokemonData()" class="bottom-btn">Load Next</button>
+  </div>
+</div>
